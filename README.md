@@ -32,7 +32,10 @@ Instead, you switch to subtraction.
 
 * The program recognizes number input
 
-* the program would literal traslation of numbers to strings of Is
+---------------------------------------- 
+
+
+the program would literal traslation of numbers to strings of Is
   input example: number 14
   output example:  IIIII IIIII IIII
 
@@ -44,8 +47,8 @@ while (number > 0) {
   number --;
 }
 console.log(numberArray);
-
-the program counts the number of Is and translate I to one of the other symbols
+------------------------------------------
+the program counts the number of Is and translate I to one of the V symbol
  input example: 5
  output example: IIIII = V change to V 
 
@@ -68,6 +71,61 @@ for (const element of iArray) {
 const roman = finalArray.join("");
 console.log(finalArray);
 console.log(roman)
+------------------------------------------
+the program counts the number of Is and translate I to the varriang sombols:
+V       5
+X       10
+L       50
+C       100
+D       500
+M       1,000
+
+ input example: 15
+ output example: IIIII IIIII IIIII = VVV = XV 
+
+###CODE:
+
+let number = 26;
+let iArray = [];
+let finalArray = []
+let check = 0
+while (number > 0) {
+  iArray.push("I");
+  number --;
+}
+for (const element of iArray) {
+	check += 1;
+  if (check === 10) {
+  	for (i=0; i<check; i++) {
+  		iArray.shift();
+    }
+  	finalArray.push("X")
+    check = 0;
+  }
+}
+for (const element of iArray) {
+ 	check += 1;
+  if (check === 5) {
+  	for (i=0; i<check; i++) {
+  		iArray.shift();
+    }
+    finalArray.push("V")
+    check = 0;
+  }
+}
+let romanArray = finalArray.concat(iArray);
+
+
+
+const roman = romanArray.join("");
+console.log(finalArray);
+console.log(roman)
+------------------------------------------ 
+
+
+
+
+
 
 
 The program recognizes that X IIII is too long and adjust to the rule of Three 
