@@ -17,28 +17,58 @@ C       100
 D       500
 M       1,000
 
-The most basic rule is that you add the value of all the symbols: so II is 2, LXVI is 66, etc.
+* The most basic rule is that you add the value of all the symbols: so II is 2, LXVI is 66, etc.
 
-The exception is that there may not be more than three of the same characters in a row.
+* The exception is that there may not be more than three of the same characters in a row.
 Instead, you switch to subtraction.
 
-So instead of writing IIII for 4, you write IV (for 5 minus 1); and instead of writing LXXXX for 90, you write XC.
+* So instead of writing IIII for 4, you write IV (for 5 minus 1); and instead of writing LXXXX for 90, you write XC.
 
-You also have to separate ones, tens, hundreds, and thousands. 
+* You also have to separate ones, tens, hundreds, and thousands. 
 
-In other words, 99 is XCIX, not IC. You cannot count higher than 3,999 in Roman numerals.
+* In other words, 99 is XCIX, not IC. You cannot count higher than 3,999 in Roman numerals.
 
-Do not add any UI logic until you've completed your business logic (and included testing).
+* Do not add any UI logic until you've completed your business logic (and included testing).
 
-The program recognizes number input
+* The program recognizes number input
 
-the program would literal traslation of numbers to strings of Is
+* the program would literal traslation of numbers to strings of Is
   input example: number 14
   output example:  IIIII IIIII IIII
+
+Code: 
+let number = 10;
+let numberArray = [];
+while (number > 0) {
+  numberArray.push("I");
+  number --;
+}
+console.log(numberArray);
 
 the program counts the number of Is and translate I to one of the other symbols
  input example: 5
  output example: IIIII = V change to V 
+
+let number = 10;
+let iArray = [];
+let finalArray = []
+let check = 0
+while (number > 0) {
+  iArray.push("I");
+  number --;
+}
+for (const element of iArray) {
+	check += 1;
+  if (check === 5) {
+  	finalArray.push("V")
+    check = 0;
+  }
+}
+
+const roman = finalArray.join("");
+console.log(finalArray);
+console.log(roman)
+
 
 The program recognizes that X IIII is too long and adjust to the rule of Three 
  input example : X IIII
