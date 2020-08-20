@@ -8,14 +8,14 @@
 
 Write a method to convert numbers into Roman numerals. Roman numerals are based on seven symbols:
 
-Symbol  Value
-I       1
-V       5
-X       10
-L       50
-C       100
-D       500
-M       1,000
+Symbol = Value
+* I = 1
+* V = 5
+* X = 10
+* L = 50
+* C = 100
+* D = 500
+* M = 1,000
 
 * The most basic rule is that you add the value of all the symbols: so II is 2, LXVI is 66, etc.
 
@@ -33,13 +33,13 @@ Instead, you switch to subtraction.
 * The program recognizes number input
 
 ---------------------------------------- 
-
+# Test 1
 
 the program would literal traslation of numbers to strings of Is
   input example: number 14
   output example:  IIIII IIIII IIII
 
-Code: 
+### Code: 
 let number = 10;
 let numberArray = [];
 while (number > 0) {
@@ -47,11 +47,12 @@ while (number > 0) {
   number --;
 }
 console.log(numberArray);
-------------------------------------------
+
+# Test 2
 the program counts the number of Is and translate I to one of the V symbol
  input example: 5
  output example: IIIII = V change to V 
-
+### code
 let number = 10;
 let iArray = [];
 let finalArray = []
@@ -71,7 +72,8 @@ for (const element of iArray) {
 const roman = finalArray.join("");
 console.log(finalArray);
 console.log(roman)
-------------------------------------------
+
+# Test 3
 the program counts the number of Is and translate I to the varriang sombols:
 V       5
 X       10
@@ -83,7 +85,7 @@ M       1,000
  input example: 15
  output example: IIIII IIIII IIIII = VVV = XV 
 
-###CODE:
+### CODE:
 
 let number = 26;
 let iArray = [];
@@ -114,16 +116,9 @@ for (const element of iArray) {
   }
 }
 let romanArray = finalArray.concat(iArray);
-
-
-
 const roman = romanArray.join("");
 console.log(finalArray);
 console.log(roman)
------------------------------------------- 
-
-
-
 
 
 
@@ -135,7 +130,7 @@ The program recognizes that X IIII is too long and adjust to the rule of Three
 
 
 
-## Specs
+### Specs
 I = 1
 II = 2
 III = 3 
@@ -150,18 +145,6 @@ Viii=8
 ix=9
 
 x=10
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Setup/Installation Requirements
 
